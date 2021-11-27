@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+
+<style>
+	body {
+		background-color: #ffffee;
+		font-size: 100%;
+		font-family: Arial;
+		color: #5d5d5d;
+	}
+	
+	.info {
+		float: left;
+		width: 410px;
+		height: inherit;
+		margin-left: 30px;
+	}
+	
+	.cover {
+		float: left;
+ 		width: 257px; 
+ 		height: 257px; 
+ 		border-right: 1px solid rgba(140,140,140,0.15);
+ 		background-color: gray;
+	}
+	
+	#ill {
+		max-width: 256px;
+		max-height: 256px;
+		display:block;
+		margin:auto;
+	}	
+	
+	.info_wrap {
+		background-color: white;
+		border: 1px solid #800000;
+		border-radius: 6px;
+		width: 850px;
+		height: 256px;
+		margin: 45px;
+	}
+	
+	.title {
+		font-family: 'lato',sans-serif;
+		font-size: 22px;
+		line-height: 17px;
+	}
+	
+	.tags {
+		text-align: center;
+		line-height: 17px;
+		background-color: #ffc107;
+		border-radius: 10px;
+		font-size: 14px;
+		width: 57px;
+		height: 17px;
+		color: black;
+	}
+	
+	#tracks {
+		font-size: 25px;
+	}
+	
+	.inputs {
+		height: 30px;
+		width: 400px;
+		padding: 0 5px;
+		margin: 10px 0 10px 0;
+		border: none;
+		background: #e1dcd8;
+		color: rgb(98,94,91);
+		box-shadow:
+				0px 1px 1px rgba(255,255,255,0.7),
+				inset 0px 2px 5px #aaaaaa;
+		border-radius: 5px;
+	}
+	.inputs:focus{
+		outline: none;
+		background: #f5f2ef;
+	}
+	
+	input[type="file"] {
+	    position: fixed;
+	    right: 100%;
+	    bottom: 100%;
+	}
+</style>
+
+</head>
+
+<body>
+
+	<form action="\FubukiProject\addItems" method="post">
+	
+		<div class="info_wrap">
+			<div class="cover">
+				<label for="file-upload" class="custom-file-upload">
+					<div><img id="ill" src="resource/selection-mods@2x.png"></div>
+				</label>
+				<input id="file-upload" name="url" type="file"/>
+				
+			</div>
+				
+			<div class="info">
+				<p class="title"><div id="tracks">新增項目</div></p>
+				
+				<hr style="margin-bottom: 17px;">
+				
+				<div class="tags">Title</div>
+				<input class="inputs" id="title" name="title" type="text" placeholder="輸入項目標題..">
+				<div class="tags">Info</div>
+				<input class="inputs" id="info" name="info" type="text" placeholder="輸入項目說明..">
+				<input type="submit">
+			</div>
+		</div>
+	</form>
+	
+	<script>
+		// 預覽圖片
+		document.getElementById("file-upload").addEventListener("change", function() {
+			const file = this.files[0];
+			const objectURL = URL.createObjectURL(file);
+			document.getElementById("ill").setAttribute("src", objectURL);
+		});
+	</script>
+	
+</body>
+
+</html>
