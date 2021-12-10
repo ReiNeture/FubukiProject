@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="UTF-8">
 	<title>こんかなた</title>
+	
 </head>
+
 <body>
+
 	<h1 align="center">こんかなた！</h1>
-	<form action="\FubukiProject\KanataForm" method="POST">
+	<form action="\FubukiProject\InsertSvl" method="POST">
 		名稱: <input type="text" name="name">
 		<br>
 		資訊: <input type="text" name="info">
 		<br>
 		價格: <input type="text" name="price">
 		<input type="submit" value="送出">
+		<br>
 	</form>
+	<form action="\FubukiProject\QueryIdSvl" method="POST">
+		Id: <input type="text" name="id">
+		<input type="submit" value="查詢">
+	</form>
+	<form action="\FubukiProject\QuerySvl" method="POST">
+		<input type="submit" value="顯示全部">
+	</form>
+	
 </body>
 </html>

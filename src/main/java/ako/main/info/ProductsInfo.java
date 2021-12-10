@@ -5,12 +5,7 @@ public class ProductsInfo {
 	String name;
 	String info;
 	int price;
-	
-	public ProductsInfo(String name, String info, int price) {
-		this.name = name;
-		this.info = info;
-		this.price = price;
-	}
+	int id;
 	
 	public String getName() {
 		return name;
@@ -24,6 +19,10 @@ public class ProductsInfo {
 		return price;
 	}
 	
+	public int getId() {
+		return id;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -34,6 +33,10 @@ public class ProductsInfo {
 	
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }
