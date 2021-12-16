@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1 align="center">こんかなた！</h1>
-	<table border="1" width="30%">
+	<table border="1" width="100%">
 	<tr>
 		<th>ProductId</th>
 		<th>ProductName</th>

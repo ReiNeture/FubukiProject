@@ -19,7 +19,14 @@ public class QueryIdSvl extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		final String id = request.getParameter("id");
 		
+		if(id == null)
+			System.err.println("Err!");
+		
+		ProductsInfo product = KanataProducts.queryId(Integer.valueOf(id));
+		request.setAttribute("product", product);
+		request.getRequestDispatcher("\\amanekanata\\kanatashop.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

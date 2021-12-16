@@ -11,17 +11,16 @@
 	<h1 align="center">こんかなた！</h1>
 	<table border="1" width="100%">
 	<tr>
-		<th>ProductId</th>
+		<th>Id</th>
 		<th>ProductName</th>
-		<th>ProductInfo</th>
 		<th>Price</th>
 	</tr>
 	<c:forEach var="r" items="${list}">
 	<tr>
-		<td><c:out value="${r.id}"/></td>
-		<td><c:out value="${r.name}"/></td>
-		<td><c:out value="${r.info}"/></td>
-		<td><c:out value="${r.price}"/></td>
+		<td>${r.id}</td>
+		<td><a href="\FubukiProject\QueryIdSvl?id=${r.id}">${r.name}</a></td>
+		<td>${r.price}</td>
+		
 	</tr>
 	</c:forEach>
 	</table>
